@@ -100,6 +100,9 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | 189 | 3×3×3×7 | 4 | Regular operators only |
 | 156 | (2×6)×(6+7) | 4 | Regular operators only |
 | 159 | ((7×7)+4) → [Island 4: ×3] | 3 + 1 Island 4 | Single island node |
+| 184 | (6×6) → [Island 2: ×5] → [Island 2: +4] | 2 + 2 Island 2 | Chaining Island 2 |
+| 171 | (6×7×4)+3 | 4 | Regular operators only |
+| 140 | 4×5×7 | 3 | Regular operators only |
 
 ## Strategy Tips
 - Look for products that get close to the target
