@@ -63,9 +63,37 @@ cd nodemath
 
 4. **Sync changes**: All updates are automatically committed and pushed to GitHub by Claude Code
 
+### Setting Up on a New Computer
+
+If you're working on a computer that has never had this project before:
+
+1. **Navigate to where you want the project**:
+   ```bash
+   cd ~
+   # Or navigate to your preferred directory, e.g., cd ~/Documents
+   ```
+
+2. **Clone the repository**:
+   ```bash
+   git clone https://github.com/chayde/nodemath.git
+   ```
+
+3. **Enter the project directory**:
+   ```bash
+   cd nodemath
+   ```
+
+4. **Verify the files are present**:
+   ```bash
+   ls
+   # You should see: CLAUDE.md  node-math-game.md  README.md
+   ```
+
+You now have a fresh copy of the project with all the latest documentation!
+
 ### Pulling Latest Changes
 
-If you've made updates on another computer, pull the latest version:
+If you've already cloned the repository and made updates on another computer, pull the latest version:
 
 ```bash
 cd nodemath
