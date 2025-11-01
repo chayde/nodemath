@@ -47,11 +47,45 @@ The documentation suggests using the Task tool to launch agents for solving puzz
 - Find efficient solutions respecting the single-island routing constraint
 - Return solution with breakdown and node count
 
-## File Updates
+## File Updates and Version Control
 
-As the user progresses in the game, they may unlock:
-- New operators
-- New numbers
-- New islands with different special nodes
+This repository is version-controlled with Git and synced to GitHub at: https://github.com/chayde/nodemath
 
-Update `node-math-game.md` accordingly when these unlocks occur.
+**IMPORTANT: Commit and push ALL changes to GitHub automatically.**
+
+Whenever you make changes to any file in this repository, you MUST:
+1. Stage the changes with `git add .`
+2. Create a descriptive commit with `git commit -m "message"`
+3. Push to GitHub with `git push`
+
+### Common scenarios requiring commits:
+
+**Game progression updates:**
+- New operators unlocked → Update `node-math-game.md` and commit
+- New numbers unlocked → Update `node-math-game.md` and commit
+- New islands unlocked → Update `node-math-game.md` and commit
+- New island nodes discovered → Update `node-math-game.md` and commit
+
+**Solution updates:**
+- User confirms a solution works → Add to solved problems table and commit
+- Multiple solutions confirmed → Add all to table and commit once
+
+**Documentation updates:**
+- Changes to CLAUDE.md → Commit
+- Changes to game rules or strategy → Commit
+
+### Commit message format:
+Use descriptive messages that explain what changed:
+- "Add number 8 to available numbers"
+- "Add Island 5 with new nodes"
+- "Add confirmed solutions for targets 184, 171, 140"
+- "Update strategy tips for new operators"
+
+Always include the standard footer:
+```
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+This ensures the user can access the latest game state from any computer and maintains a history of progression through the game.
