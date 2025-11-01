@@ -2,49 +2,54 @@
 
 # Node Math Game - Session Welcome Script
 # Reads current game state and provides context for the session
+# Uses JSON output to display message to user
 
 GAME_FILE="/home/mark/nodemath/node-math-game.md"
 
 if [ ! -f "$GAME_FILE" ]; then
-    echo "⚠️  Warning: node-math-game.md not found"
+    echo '{"systemMessage": "⚠️  Warning: node-math-game.md not found"}'
     exit 0
 fi
 
-# Display notification to user (stderr shows in terminal)
->&2 echo "📊 Node Math Game status loaded - Claude is ready to help!"
->&2 echo ""
+# Build the status message
+STATUS_MSG="═══════════════════════════════════════════════════════════════
+📊 NODE MATH GAME - Current Status
+═══════════════════════════════════════════════════════════════
 
-echo "═══════════════════════════════════════════════════════════════"
-echo "📊 NODE MATH GAME - Current Status"
-echo "═══════════════════════════════════════════════════════════════"
-echo ""
+🔧 Available Operators:"
 
 # Extract available operators
-echo "🔧 Available Operators:"
-sed -n '/### Available Operators/,/### Available Numbers/p' "$GAME_FILE" | grep '^-' | sed 's/^/  /'
-echo ""
+OPERATORS=$(sed -n '/### Available Operators/,/### Available Numbers/p' "$GAME_FILE" | grep '^-' | sed 's/^/  /')
+STATUS_MSG="$STATUS_MSG
+$OPERATORS
+
+🔢 Available Numbers:"
 
 # Extract available numbers
-echo "🔢 Available Numbers:"
 POSITIVE=$(grep -A 1 "^- Positive:" "$GAME_FILE" | tail -1 | sed 's/^- Positive: //')
 NEGATIVE=$(grep -A 1 "^- Negative:" "$GAME_FILE" | tail -1 | sed 's/^- Negative: //')
-echo "  Positive: $POSITIVE"
-echo "  Negative: $NEGATIVE"
-echo ""
+STATUS_MSG="$STATUS_MSG
+  Positive: $POSITIVE
+  Negative: $NEGATIVE
+
+"
 
 # Count islands
 ISLAND_COUNT=$(grep -c "^#### Island" "$GAME_FILE")
-echo "🏝️  Islands Unlocked: $ISLAND_COUNT"
-echo ""
+STATUS_MSG="$STATUS_MSG🏝️  Islands Unlocked: $ISLAND_COUNT
+
+"
 
 # Count solved problems
 SOLVED_COUNT=$(grep -c "^|" "$GAME_FILE" | awk '{print $1-2}')  # Subtract header rows
-echo "✅ Solved Problems: $SOLVED_COUNT targets confirmed"
-echo ""
+STATUS_MSG="$STATUS_MSG✅ Solved Problems: $SOLVED_COUNT targets confirmed
+
+"
 
 # Show proposed solutions awaiting testing
-echo "🧪 PROPOSED SOLUTIONS (Ready for Testing):"
-echo "───────────────────────────────────────────────────────────────"
+STATUS_MSG="$STATUS_MSG🧪 PROPOSED SOLUTIONS (Ready for Testing):
+───────────────────────────────────────────────────────────────"
+
 IN_PROPOSED=0
 while IFS= read -r line; do
     if [[ "$line" == "## Proposed WIP Solutions" ]]; then
@@ -56,19 +61,27 @@ while IFS= read -r line; do
             break
         fi
         if [[ "$line" =~ ^\|[[:space:]]*[0-9-]+ ]]; then
-            echo "$line"
+            STATUS_MSG="$STATUS_MSG
+$line"
         fi
     fi
 done < "$GAME_FILE"
-echo ""
 
-echo "═══════════════════════════════════════════════════════════════"
-echo "💡 NEXT STEPS:"
-echo "───────────────────────────────────────────────────────────────"
-echo "  • Test proposed solutions above in the game"
-echo "  • Provide new target numbers to solve"
-echo "  • Report unlocked operators, numbers, or islands"
-echo "═══════════════════════════════════════════════════════════════"
+STATUS_MSG="$STATUS_MSG
+
+═══════════════════════════════════════════════════════════════
+💡 NEXT STEPS:
+───────────────────────────────────────────────────────────────
+  • Test proposed solutions above in the game
+  • Provide new target numbers to solve
+  • Report unlocked operators, numbers, or islands
+═══════════════════════════════════════════════════════════════"
+
+# Output JSON with systemMessage to display to user
+# Also include the message in stdout for Claude's context
+printf '%s' "$STATUS_MSG"
 echo ""
+echo ""
+echo '{"systemMessage": "'"$(echo "$STATUS_MSG" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/\\n/g')"'"}'
 
 exit 0
