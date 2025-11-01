@@ -10,6 +10,10 @@ if [ ! -f "$GAME_FILE" ]; then
     exit 0
 fi
 
+# Display notification to user (stderr shows in terminal)
+>&2 echo "📊 Node Math Game status loaded - Claude is ready to help!"
+>&2 echo ""
+
 echo "═══════════════════════════════════════════════════════════════"
 echo "📊 NODE MATH GAME - Current Status"
 echo "═══════════════════════════════════════════════════════════════"
