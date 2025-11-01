@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Session Startup Behavior
 
-**IMPORTANT: At the start of EVERY new session, you MUST run the `/status` slash command to display the current game state to the user.**
+**IMPORTANT: At the start of EVERY new session, you MUST run the `/gamestatus` slash command to display the current game state to the user.**
 
 This command shows:
 - Available operators and numbers
@@ -13,7 +13,7 @@ This command shows:
 - Proposed solutions awaiting testing
 - Next steps
 
-The SessionStart hook already loads this context for you automatically, but the user cannot see that. Running `/status` displays the same information to the user so they can see the current game state.
+The SessionStart hook already loads this context for you automatically, but the user cannot see that. Running `/gamestatus` displays the same information to the user so they can see the current game state.
 
 ## Repository Purpose
 
