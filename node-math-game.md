@@ -10,7 +10,7 @@ Node Math is a Steam game where you create equations to hit target numbers using
 - Multiplication (×)
 
 ### Available Numbers
-- Positive: 1, 2, 3, 4, 5, 6, 7
+- Positive: 1, 2, 3, 4, 5, 6, 7, 8
 - Negative: -1, -2, -3, -4, -5
 
 ### Special Islands
