@@ -104,6 +104,16 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | 171 | (6×7×4)+3 | 4 | Regular operators only |
 | 140 | 4×5×7 | 3 | Regular operators only |
 
+## Proposed WIP Solutions
+
+This section contains solutions that have been calculated but not yet tested in the game. Once confirmed, they will be moved to the "Solved Problems" table above.
+
+| Target | Proposed Solution | Numbers Used | Notes |
+|--------|-------------------|--------------|-------|
+| 167 | (6×7×4) → [Island 3: -1] | 3 + 1 Island 3 | Alternative: (7×7×3)+(4×5) = 5 regular |
+| -168 | -3×7×8 | 3 | Alternatives: (8×3) → [Island 1: ×(-7)] or (8×7) → [Island 3: ×(-3)] |
+| 143 | (6×6×4) → [Island 3: -1] | 3 + 1 Island 3 | Alternatives: (4×5×7)+3 = 4 regular, (7×7×3) → [Island 3: -4] |
+
 ## Strategy Tips
 - Look for products that get close to the target
 - Consider what remainders can be easily made with addition
