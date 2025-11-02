@@ -91,28 +91,27 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | Target | Solution | Numbers Used | Notes |
 |--------|----------|--------------|-------|
 | 76 | ((2×6)×6)+4 | 5 | Regular operators only |
-| 148 | ((6×6)×4) → [Island 2: +4] | 3 + 1 island node | Single island node |
-| 166 | ((6×4)+3) → [Island 2: ×6] → [Island 2: +4] | 3 + 2 Island 2 | Chaining Island 2 |
-| 196 | ((6×4)+4) → [Island 1: ×(-1)] → [Island 1: ×(-7)] | 3 + 2 Island 1 | Chaining Island 1 |
-| 161 | (7×7×3)+(7×2) | 5 | Regular operators only |
+| 140 | 4×5×7 | 3 | Regular operators only |
+| 143 | (6×6×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
 | 146 | ((5×5)×6) → [Island 3: -4] | 3 + 1 Island 3 | Single island node |
-| -128 | (6×7) → [Island 3: ×(-3)] → [Island 3: -2] | 2 + 2 Island 3 | Chaining Island 3 |
-| 189 | 3×3×3×7 | 4 | Regular operators only |
+| 148 | ((6×6)×4) → [Island 2: +4] | 3 + 1 island node | Single island node |
 | 156 | (2×6)×(6+7) | 4 | Regular operators only |
 | 159 | ((7×7)+4) → [Island 4: ×3] | 3 + 1 Island 4 | Single island node |
-| 184 | (6×6) → [Island 2: ×5] → [Island 2: +4] | 2 + 2 Island 2 | Chaining Island 2 |
+| 161 | (7×7×3)+(7×2) | 5 | Regular operators only |
+| 166 | ((6×4)+3) → [Island 2: ×6] → [Island 2: +4] | 3 + 2 Island 2 | Chaining Island 2 |
+| 167 | (6×7×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
 | 171 | (6×7×4)+3 | 4 | Regular operators only |
-| 140 | 4×5×7 | 3 | Regular operators only |
+| 184 | (6×6) → [Island 2: ×5] → [Island 2: +4] | 2 + 2 Island 2 | Chaining Island 2 |
+| 189 | 3×3×3×7 | 4 | Regular operators only |
+| 196 | ((6×4)+4) → [Island 1: ×(-1)] → [Island 1: ×(-7)] | 3 + 2 Island 1 | Chaining Island 1 |
+| -128 | (6×7) → [Island 3: ×(-3)] → [Island 3: -2] | 2 + 2 Island 3 | Chaining Island 3 |
+| -168 | -3×7×8 | 3 | Regular operators only |
 
 ## Proposed WIP Solutions
 
 This section contains solutions that have been calculated but not yet tested in the game. Once confirmed, they will be moved to the "Solved Problems" table above.
 
-| Target | Proposed Solution | Numbers Used | Notes |
-|--------|-------------------|--------------|-------|
-| 167 | (6×7×4) → [Island 3: -1] | 3 + 1 Island 3 | Alternative: (7×7×3)+(4×5) = 5 regular |
-| -168 | -3×7×8 | 3 | Alternatives: (8×3) → [Island 1: ×(-7)] or (8×7) → [Island 3: ×(-3)] |
-| 143 | (6×6×4) → [Island 3: -1] | 3 + 1 Island 3 | Alternatives: (4×5×7)+3 = 4 regular, (7×7×3) → [Island 3: -4] |
+(No pending solutions)
 
 ## Strategy Tips
 - Look for products that get close to the target
