@@ -93,6 +93,7 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | 76 | ((2×6)×6)+4 | 5 | Regular operators only |
 | 140 | 4×5×7 | 3 | Regular operators only |
 | 143 | (6×6×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
+| 145 | (6×6×4) → [Island 4: +1] | 3 + 1 Island 4 | Single island node |
 | 146 | ((5×5)×6) → [Island 3: -4] | 3 + 1 Island 3 | Single island node |
 | 148 | ((6×6)×4) → [Island 2: +4] | 3 + 1 island node | Single island node |
 | 156 | (2×6)×(6+7) | 4 | Regular operators only |
@@ -101,6 +102,7 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | 166 | ((6×4)+3) → [Island 2: ×6] → [Island 2: +4] | 3 + 2 Island 2 | Chaining Island 2 |
 | 167 | (6×7×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
 | 171 | (6×7×4)+3 | 4 | Regular operators only |
+| 177 | (7×5×5) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
 | 184 | (6×6) → [Island 2: ×5] → [Island 2: +4] | 2 + 2 Island 2 | Chaining Island 2 |
 | 189 | 3×3×3×7 | 4 | Regular operators only |
 | 196 | ((6×4)+4) → [Island 1: ×(-1)] → [Island 1: ×(-7)] | 3 + 2 Island 1 | Chaining Island 1 |
