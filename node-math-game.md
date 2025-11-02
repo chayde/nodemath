@@ -115,7 +115,11 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 
 This section contains solutions that have been calculated but not yet tested in the game. Once confirmed, they will be moved to the "Solved Problems" table above.
 
-(No pending solutions)
+| Target | Proposed Solution | Numbers Used | Notes |
+|--------|-------------------|--------------|-------|
+| 202 | 5×5×8+2 | 4 | Alternative: 7×7×4+6 (also 4 regular) |
+| 242 | 6×8×5+2 | 4 | Regular operators only |
+| -222 | -7×8×4+2 | 4 | Uses -7 from available negative numbers |
 
 ## Strategy Tips
 - Look for products that get close to the target
