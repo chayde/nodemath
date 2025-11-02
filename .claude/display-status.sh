@@ -22,8 +22,8 @@ echo ""
 
 # Extract available numbers
 echo "🔢 Available Numbers:"
-POSITIVE=$(grep -A 1 "^- Positive:" "$GAME_FILE" | tail -1 | sed 's/^- Positive: //')
-NEGATIVE=$(grep -A 1 "^- Negative:" "$GAME_FILE" | tail -1 | sed 's/^- Negative: //')
+POSITIVE=$(grep "^- Positive:" "$GAME_FILE" | sed 's/^- Positive: //')
+NEGATIVE=$(grep "^- Negative:" "$GAME_FILE" | sed 's/^- Negative: //')
 echo "  Positive: $POSITIVE"
 echo "  Negative: $NEGATIVE"
 echo ""
