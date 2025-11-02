@@ -11,7 +11,7 @@ Node Math is a Steam game where you create equations to hit target numbers using
 
 ### Available Numbers
 - Positive: 1, 2, 3, 4, 5, 6, 7, 8
-- Negative: -1, -2, -3, -4, -5
+- Negative: -1, -2, -3, -4, -5, -6, -7
 
 ### Special Islands
 Islands contain powerful special nodes that can be used in equations. Each node on an island can be used at most once per equation.
