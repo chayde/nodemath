@@ -20,10 +20,10 @@ echo ""
 echo "=== END GAME STATE ==="
 echo ""
 
-# Output JSON with strong instruction to run /gamestatus
+# Output JSON noting that game state has been loaded
 cat << 'EOF'
 {
-  "additionalContext": "🚨 CRITICAL STARTUP INSTRUCTION 🚨\n\nYou MUST run the /gamestatus slash command as your FIRST action in this session, BEFORE responding to the user's message.\n\nThis is REQUIRED at the start of EVERY session to display the current game state to the user.\n\nDo NOT skip this step. Do NOT just respond to the user. Execute /gamestatus IMMEDIATELY.\n\n---\n\nFull game state from node-math-game.md has been loaded above for your reference."
+  "additionalContext": "Full game state from node-math-game.md has been loaded above for your reference."
 }
 EOF
 
