@@ -1,8 +1,9 @@
 # Node Math Game
 
-**Current Version: v1.2**
+**Current Version: v1.3**
 
 **Version History:**
+- **v1.3** (2025-11-03): AI strategy improvement - Throughput optimization (prioritize island solutions with fewer regular numbers)
 - **v1.2** (2025-11-03): Number 10 unlocked
 - **v1.1** (2025-11-03): Number 9 unlocked
 - **v1.0** (2025-11-03): Initial version - Operators: +, ×; Numbers: 1-8, -1 to -7; Islands: 1-4
