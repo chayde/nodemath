@@ -107,9 +107,12 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | 189 | 3×3×3×7 | 4 | Regular operators only |
 | 191 | (6×8×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
 | 196 | ((6×4)+4) → [Island 1: ×(-1)] → [Island 1: ×(-7)] | 3 + 2 Island 1 | Chaining Island 1 |
+| 202 | (5×5×8) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
 | 212 | (6×6×6) → [Island 3: -4] | 3 + 1 Island 3 | Single island node |
+| 242 | (6×8×5) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
 | -128 | (6×7) → [Island 3: ×(-3)] → [Island 3: -2] | 2 + 2 Island 3 | Chaining Island 3 |
 | -168 | -3×7×8 | 3 | Regular operators only |
+| -222 | (-7×8×4) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
 
 ## Proposed WIP Solutions
 
@@ -117,9 +120,6 @@ This section contains solutions that have been calculated but not yet tested in 
 
 | Target | Proposed Solution | Numbers Used | Notes |
 |--------|-------------------|--------------|-------|
-| 202 | 5×5×8+2 | 4 | Alternative: 7×7×4+6 (also 4 regular) |
-| 242 | 6×8×5+2 | 4 | Regular operators only |
-| -222 | -7×8×4+2 | 4 | Uses -7 from available negative numbers |
 
 ## Strategy Tips
 - Look for products that get close to the target
