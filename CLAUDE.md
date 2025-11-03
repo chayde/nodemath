@@ -45,11 +45,18 @@ When the user provides a new target number to solve:
 
 ## Using Agents
 
-The documentation suggests using the Task tool to launch agents for solving puzzles. Agents should be instructed to:
+When the user provides target numbers to solve, launch agents in parallel for maximum efficiency:
+
+**For multiple targets:** Launch one agent per target in a single message (parallel execution)
+**For single target:** Launch one agent
+
+Each agent should be instructed to:
 - Read the game constraints from `node-math-game.md`
-- Analyze the target number
-- Find efficient solutions respecting the single-island routing constraint
+- Analyze the specific target number assigned to it
+- Find the most efficient solution respecting the single-island routing constraint
 - Return solution with breakdown and node count
+
+Example: If user provides "284, 220, -205", launch 3 agents in parallel - one for 284, one for 220, and one for -205.
 
 ## File Updates and Version Control
 

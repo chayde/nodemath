@@ -138,20 +138,26 @@ This section contains solutions that have been calculated but not yet tested in 
 
 ## Working with Claude Code Agents
 
-When a new target number needs to be solved:
+When target numbers need to be solved:
 
-1. **Launch an agent** using the Task tool
-2. **Instruct the agent to:**
+1. **Launch agents in parallel** using the Task tool
+   - **Multiple targets:** Launch one agent per target in a single message for parallel execution
+   - **Single target:** Launch one agent
+   - Example: For targets "284, 220, -205" → launch 3 agents simultaneously
+
+2. **Instruct each agent to:**
    - Read `/home/mark/nodemath/node-math-game.md` to understand game constraints
-   - Analyze the target number provided
+   - Analyze its specific target number
    - Find the most efficient solution using:
      - Regular numbers/operators only, OR
      - Regular numbers/operators + nodes from a SINGLE island (can chain multiple nodes from that island)
    - Return the solution with breakdown and node count
-3. **Share the agent's solution** with the user for testing in the game
-4. **Update this file** with confirmed working solutions
 
-This approach ensures consistent problem-solving across sessions and leverages the agent's ability to explore multiple solution paths efficiently.
+3. **Share all agent solutions** with the user for testing in the game
+
+4. **Update this file** with confirmed working solutions and commit to GitHub
+
+This approach maximizes efficiency through parallel execution and ensures consistent problem-solving across sessions.
 
 ## Updates
 - Add new operators here as they become available in the game
