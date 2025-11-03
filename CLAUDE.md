@@ -14,8 +14,8 @@ This repository contains documentation for solving "Node Math" - a Steam puzzle 
 
 The primary file is `node-math-game.md` which contains:
 - Available operators (currently: +, ×)
-- Available numbers (positive: 1-6, negative: -1 to -4)
-- Three islands with special nodes (multipliers, adders, subtractors)
+- Available numbers (positive: 1-9, negative: -1 to -7)
+- Four islands with special nodes (multipliers, adders, subtractors)
 - Game rules and constraints
 - Solved problems table
 - Strategy tips

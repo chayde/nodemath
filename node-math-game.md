@@ -1,8 +1,9 @@
 # Node Math Game
 
-**Current Version: v1.0**
+**Current Version: v1.1**
 
 **Version History:**
+- **v1.1** (2025-11-03): Number 9 unlocked
 - **v1.0** (2025-11-03): Initial version - Operators: +, ×; Numbers: 1-8, -1 to -7; Islands: 1-4
 
 ## Overview
@@ -15,7 +16,7 @@ Node Math is a Steam game where you create equations to hit target numbers using
 - Multiplication (×)
 
 ### Available Numbers
-- Positive: 1, 2, 3, 4, 5, 6, 7, 8
+- Positive: 1, 2, 3, 4, 5, 6, 7, 8, 9
 - Negative: -1, -2, -3, -4, -5, -6, -7
 
 ### Special Islands
