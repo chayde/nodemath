@@ -97,6 +97,7 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | Target | Solution | Numbers Used | Version | Notes |
 |--------|----------|--------------|---------|-------|
 | 76 | ((2×6)×6)+4 | 5 | v1.0 | Regular operators only |
+| 136 | (9×5×3) → [Island 4: +1] | 3 + 1 Island 4 | v1.1 | Single island node, uses number 9 |
 | 140 | 4×5×7 | 3 | v1.0 | Regular operators only |
 | 143 | (6×6×4) → [Island 3: -1] | 3 + 1 Island 3 | v1.0 | Single island node |
 | 145 | (6×6×4) → [Island 4: +1] | 3 + 1 Island 4 | v1.0 | Single island node |
@@ -107,8 +108,9 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | 161 | (8×5×4) → [Island 4: +1] | 3 + 1 Island 4 | v1.0 | Single island node |
 | 166 | ((6×4)+3) → [Island 2: ×6] → [Island 2: +4] | 3 + 2 Island 2 | v1.0 | Chaining Island 2 |
 | 167 | (6×7×4) → [Island 3: -1] | 3 + 1 Island 3 | v1.0 | Single island node |
-| 171 | (6×7×4)+3 | 4 | v1.0 | Regular operators only |
+| 171 | (6×7×4) → [Island 2: +3] | 3 + 1 Island 2 | v1.1 | Re-evaluated from v1.0, uses island instead |
 | 177 | (7×5×5) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
+| 179 | (9×5×4) → [Island 3: -1] | 3 + 1 Island 3 | v1.1 | Single island node, uses number 9 |
 | 184 | (6×6) → [Island 2: ×5] → [Island 2: +4] | 2 + 2 Island 2 | v1.0 | Chaining Island 2 |
 | 189 | 3×3×3×7 | 4 | v1.0 | Regular operators only |
 | 191 | (6×8×4) → [Island 3: -1] | 3 + 1 Island 3 | v1.0 | Single island node |
