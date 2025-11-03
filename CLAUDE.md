@@ -33,6 +33,9 @@ When the user provides a new target number to solve:
 3. **Solution approach**:
    - Find the most efficient solution (fewest total nodes)
    - Consider both regular-only solutions and single-island solutions
+   - **CRITICAL: Throughput optimization** - When multiple solutions have the same total node count, ALWAYS prefer the solution with fewer regular numbers and more island nodes, as this provides significantly better game throughput/performance
+     - Example: 2 regular + 2 island (4 total) > 4 regular (4 total)
+     - Island routing reduces computational load and increases throughput
    - Each island node can only be used once per equation
    - Standard order of operations applies
 
@@ -54,6 +57,7 @@ Each agent should be instructed to:
 - Read the game constraints from `node-math-game.md`
 - Analyze the specific target number assigned to it
 - Find the most efficient solution respecting the single-island routing constraint
+- **Prioritize throughput:** When solutions have equal total node count, prefer the one with fewer regular numbers and more island nodes (significantly better game performance)
 - Return solution with breakdown and node count
 
 Example: If user provides "284, 220, -205", launch 3 agents in parallel - one for 284, one for 220, and one for -205.

@@ -142,6 +142,9 @@ This section contains solutions that have been calculated but not yet tested in 
 - Larger multiplications are generally more efficient
 - Keep track of what combinations of numbers can make useful building blocks (e.g., 4×4=16, 5×6=30)
 - **With Island Nodes:**
+  - **CRITICAL: Throughput Optimization** - Island solutions that reduce the number of regular numbers used provide significantly better throughput/performance in the game, even when total node count is the same
+    - Example: `(10×10) → [Island 4: ×3] → [Island 4: +1]` (2 regular + 2 island = 4 total) has BETTER throughput than `(10×10×3)+1` (4 regular = 4 total)
+    - **When choosing between solutions with equal node count, ALWAYS prefer the one with fewer regular numbers and more island nodes**
   - **Prefer single-island solutions:** Chain multiple nodes from ONE island rather than mixing islands
   - Large multipliers: ×6 (Island 2), ×5 (Island 2), ×(-7) (Island 1), ×(-5) (Island 1) can create big numbers efficiently
   - Addition nodes: +3 and +4 (Island 2) provide direct addition without using a separate operator
@@ -174,6 +177,7 @@ When the user provides target numbers:
    - Find the most efficient solution using:
      - Regular numbers/operators only, OR
      - Regular numbers/operators + nodes from a SINGLE island (can chain multiple nodes from that island)
+   - **Prioritize throughput:** When solutions have equal total node count, prefer the one with fewer regular numbers and more island nodes (better game performance)
    - Return the solution with breakdown and node count
 
 5. **Share all agent solutions** with the user for testing in the game
