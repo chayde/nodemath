@@ -1,5 +1,10 @@
 # Node Math Game
 
+**Current Version: v1.0**
+
+**Version History:**
+- **v1.0** (2025-11-03): Initial version - Operators: +, ×; Numbers: 1-8, -1 to -7; Islands: 1-4
+
 ## Overview
 Node Math is a Steam game where you create equations to hit target numbers using specific operators and numbers. The goal is to use the fewest numbers and operators possible.
 
@@ -88,34 +93,34 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 
 ## Solved Problems
 
-| Target | Solution | Numbers Used | Notes |
-|--------|----------|--------------|-------|
-| 76 | ((2×6)×6)+4 | 5 | Regular operators only |
-| 140 | 4×5×7 | 3 | Regular operators only |
-| 143 | (6×6×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
-| 145 | (6×6×4) → [Island 4: +1] | 3 + 1 Island 4 | Single island node |
-| 146 | ((5×5)×6) → [Island 3: -4] | 3 + 1 Island 3 | Single island node |
-| 148 | ((6×6)×4) → [Island 2: +4] | 3 + 1 island node | Single island node |
-| 156 | (2×6)×(6+7) | 4 | Regular operators only |
-| 159 | ((7×7)+4) → [Island 4: ×3] | 3 + 1 Island 4 | Single island node |
-| 161 | (8×5×4) → [Island 4: +1] | 3 + 1 Island 4 | Single island node |
-| 166 | ((6×4)+3) → [Island 2: ×6] → [Island 2: +4] | 3 + 2 Island 2 | Chaining Island 2 |
-| 167 | (6×7×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
-| 171 | (6×7×4)+3 | 4 | Regular operators only |
-| 177 | (7×5×5) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
-| 184 | (6×6) → [Island 2: ×5] → [Island 2: +4] | 2 + 2 Island 2 | Chaining Island 2 |
-| 189 | 3×3×3×7 | 4 | Regular operators only |
-| 191 | (6×8×4) → [Island 3: -1] | 3 + 1 Island 3 | Single island node |
-| 196 | ((6×4)+4) → [Island 1: ×(-1)] → [Island 1: ×(-7)] | 3 + 2 Island 1 | Chaining Island 1 |
-| 202 | (5×5×8) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
-| 212 | (6×6×6) → [Island 3: -4] | 3 + 1 Island 3 | Single island node |
-| 220 | (7×8×4) → [Island 3: -4] | 3 + 1 Island 3 | Single island node |
-| 242 | (6×8×5) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
-| 284 | (6×8×6) → [Island 3: -4] | 3 + 1 Island 3 | Single island node |
-| -128 | (6×7) → [Island 3: ×(-3)] → [Island 3: -2] | 2 + 2 Island 3 | Chaining Island 3 |
-| -168 | -3×7×8 | 3 | Regular operators only |
-| -205 | (-5×7×6)+5 | 4 | Regular operators only |
-| -222 | (-7×8×4) → [Island 4: +2] | 3 + 1 Island 4 | Single island node |
+| Target | Solution | Numbers Used | Version | Notes |
+|--------|----------|--------------|---------|-------|
+| 76 | ((2×6)×6)+4 | 5 | v1.0 | Regular operators only |
+| 140 | 4×5×7 | 3 | v1.0 | Regular operators only |
+| 143 | (6×6×4) → [Island 3: -1] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 145 | (6×6×4) → [Island 4: +1] | 3 + 1 Island 4 | v1.0 | Single island node |
+| 146 | ((5×5)×6) → [Island 3: -4] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 148 | ((6×6)×4) → [Island 2: +4] | 3 + 1 island node | v1.0 | Single island node |
+| 156 | (2×6)×(6+7) | 4 | v1.0 | Regular operators only |
+| 159 | ((7×7)+4) → [Island 4: ×3] | 3 + 1 Island 4 | v1.0 | Single island node |
+| 161 | (8×5×4) → [Island 4: +1] | 3 + 1 Island 4 | v1.0 | Single island node |
+| 166 | ((6×4)+3) → [Island 2: ×6] → [Island 2: +4] | 3 + 2 Island 2 | v1.0 | Chaining Island 2 |
+| 167 | (6×7×4) → [Island 3: -1] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 171 | (6×7×4)+3 | 4 | v1.0 | Regular operators only |
+| 177 | (7×5×5) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
+| 184 | (6×6) → [Island 2: ×5] → [Island 2: +4] | 2 + 2 Island 2 | v1.0 | Chaining Island 2 |
+| 189 | 3×3×3×7 | 4 | v1.0 | Regular operators only |
+| 191 | (6×8×4) → [Island 3: -1] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 196 | ((6×4)+4) → [Island 1: ×(-1)] → [Island 1: ×(-7)] | 3 + 2 Island 1 | v1.0 | Chaining Island 1 |
+| 202 | (5×5×8) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
+| 212 | (6×6×6) → [Island 3: -4] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 220 | (7×8×4) → [Island 3: -4] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 242 | (6×8×5) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
+| 284 | (6×8×6) → [Island 3: -4] | 3 + 1 Island 3 | v1.0 | Single island node |
+| -128 | (6×7) → [Island 3: ×(-3)] → [Island 3: -2] | 2 + 2 Island 3 | v1.0 | Chaining Island 3 |
+| -168 | -3×7×8 | 3 | v1.0 | Regular operators only |
+| -205 | (-5×7×6)+5 | 4 | v1.0 | Regular operators only |
+| -222 | (-7×8×4) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
 
 ## Proposed WIP Solutions
 
@@ -141,14 +146,22 @@ This section contains solutions that have been calculated but not yet tested in 
 
 ## Working with Claude Code Agents
 
-When target numbers need to be solved:
+When the user provides target numbers:
 
-1. **Launch agents in parallel** using the Task tool
+1. **Check current version** at the top of this file
+
+2. **Check for existing solutions** in the Solved Problems table
+   - Compare each target's solution version (if exists) with current version
+   - **Same version**: Report existing solution, skip solving
+   - **Different version**: Follow re-evaluation rules (see Version Management in CLAUDE.md)
+   - **No solution**: Proceed to solve
+
+3. **Launch agents in parallel** for targets that need solving/re-evaluation
    - **Multiple targets:** Launch one agent per target in a single message for parallel execution
    - **Single target:** Launch one agent
    - Example: For targets "284, 220, -205" → launch 3 agents simultaneously
 
-2. **Instruct each agent to:**
+4. **Instruct each agent to:**
    - Read `/home/mark/nodemath/node-math-game.md` to understand game constraints
    - Analyze its specific target number
    - Find the most efficient solution using:
@@ -156,11 +169,14 @@ When target numbers need to be solved:
      - Regular numbers/operators + nodes from a SINGLE island (can chain multiple nodes from that island)
    - Return the solution with breakdown and node count
 
-3. **Share all agent solutions** with the user for testing in the game
+5. **Share all agent solutions** with the user for testing in the game
 
-4. **Update this file** with confirmed working solutions and commit to GitHub
+6. **Update this file** with confirmed working solutions
+   - Add new solutions with current version
+   - Update re-evaluated solutions (either new solution or just version number)
+   - Commit all changes to GitHub
 
-This approach maximizes efficiency through parallel execution and ensures consistent problem-solving across sessions.
+This approach maximizes efficiency through parallel execution, avoids redundant solving, and ensures solutions stay optimized across game progression.
 
 ## Updates
 - Add new operators here as they become available in the game

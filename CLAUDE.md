@@ -58,6 +58,80 @@ Each agent should be instructed to:
 
 Example: If user provides "284, 220, -205", launch 3 agents in parallel - one for 284, one for 220, and one for -205.
 
+## Version Management
+
+### Current Version Tracking
+The current version is tracked at the top of `node-math-game.md` in the format `**Current Version: vX.Y**`. Always check this before solving targets.
+
+### Versioning Format: Two-Part Semantic Versioning (MAJOR.MINOR)
+
+**MAJOR version (vX.0 → v(X+1).0):** Increment when:
+- New **operators** unlocked (e.g., subtraction, division)
+- Fundamental changes that enable entirely new solving strategies
+- Changes that make re-evaluating ALL old solutions potentially worthwhile
+
+**MINOR version (vX.Y → vX.(Y+1)):** Increment when:
+- New **numbers** unlocked (extends possibilities)
+- New **islands** unlocked (adds new capabilities)
+- AI strategy improvements or documentation updates
+- Changes that might improve some solutions but don't fundamentally change strategies
+
+### Version History Format
+When incrementing version, add entry to Version History at top of `node-math-game.md`:
+```
+**Version History:**
+- **v1.1** (YYYY-MM-DD): Numbers 9 and -8 unlocked
+- **v1.0** (2025-11-03): Initial version - Operators: +, ×; Numbers: 1-8, -1 to -7; Islands: 1-4
+```
+
+### Solution Version Checking Workflow
+
+When the user provides target numbers:
+
+**Step 1: Check current version**
+- Read the current version from top of `node-math-game.md`
+
+**Step 2: Check for existing solutions**
+- Search Solved Problems table for each target
+- Compare solution version with current version
+
+**Step 3: Determine action for each target**
+
+**If target has NO solution:**
+- Launch agent(s) in parallel to solve
+- Add solution(s) with current version
+
+**If solution version MATCHES current version (e.g., both v1.0):**
+- Use existing solution as-is
+- Report to user: "Target X already solved in current version (vX.Y): [solution]"
+- Do NOT re-solve
+
+**If solution version is DIFFERENT - Apply re-evaluation rules:**
+
+**MAJOR version difference (e.g., solution is v1.x, current is v2.x):**
+- Report to user: "Target X has a v1.x solution, re-evaluating with v2.x constraints..."
+- Launch agent to find new solution with current constraints
+- Compare old vs new solution efficiency:
+  - If new solution is better: Update table with new solution and current version
+  - If old solution is still optimal: Update version field to current version (no solution change)
+- Report findings to user
+
+**MINOR version difference within same MAJOR (e.g., solution is v1.0, current is v1.2):**
+- Check if solution could benefit from new features:
+  - If solution uses 4+ total nodes: Worth re-evaluating (new numbers/islands might optimize)
+  - If solution uses ≤3 total nodes: Likely optimal, update version to current without re-solving
+- Report to user what action was taken
+
+**Multiple targets with mixed versions:**
+- Launch agents in parallel for all targets that need solving/re-evaluation
+- Report existing solutions that don't need changes
+
+### Updating Solutions After Re-evaluation
+When a solution is re-evaluated:
+1. If new solution is more efficient: Replace entire row with new solution and current version
+2. If old solution is still optimal: Update only the Version column to current version
+3. Always commit changes to git
+
 ## File Updates and Version Control
 
 This repository is version-controlled with Git and synced to GitHub at: https://github.com/chayde/nodemath
