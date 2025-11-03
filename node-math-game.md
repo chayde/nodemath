@@ -119,12 +119,15 @@ Islands contain powerful special nodes that can be used in equations. Each node 
 | 202 | (5×5×8) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
 | 212 | (6×6×6) → [Island 3: -4] | 3 + 1 Island 3 | v1.0 | Single island node |
 | 220 | (7×8×4) → [Island 3: -4] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 225 | (9×5) → [Island 2: ×5] | 2 + 1 Island 2 | v1.2 | Efficient use of Island 2, uses number 9 |
 | 242 | (6×8×5) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
 | 284 | (6×8×6) → [Island 3: -4] | 3 + 1 Island 3 | v1.0 | Single island node |
+| 301 | (10×10) → [Island 4: ×3] → [Island 4: +1] | 2 + 2 Island 4 | v1.2 | Chaining Island 4, uses number 10 |
 | -128 | (6×7) → [Island 3: ×(-3)] → [Island 3: -2] | 2 + 2 Island 3 | v1.0 | Chaining Island 3 |
 | -168 | -3×7×8 | 3 | v1.0 | Regular operators only |
 | -205 | (-5×7×6)+5 | 4 | v1.0 | Regular operators only |
 | -222 | (-7×8×4) → [Island 4: +2] | 3 + 1 Island 4 | v1.0 | Single island node |
+| -287 | (5×8+1) → [Island 1: ×(-7)] | 3 + 1 Island 1 | v1.2 | Single island node, better throughput |
 
 ## Proposed WIP Solutions
 
