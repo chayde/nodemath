@@ -20,11 +20,4 @@ echo ""
 echo "=== END GAME STATE ==="
 echo ""
 
-# Output JSON noting that game state has been loaded
-cat << 'EOF'
-{
-  "additionalContext": "Full game state from node-math-game.md has been loaded above for your reference."
-}
-EOF
-
 exit 0
