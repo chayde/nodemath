@@ -139,6 +139,9 @@ This section contains solutions that have been calculated but not yet tested in 
 
 | Target | Proposed Solution | Numbers Used | Notes |
 |--------|-------------------|--------------|-------|
+| 427 | `((7×9) → [Island 3: -2]) × 7` | 3 regular + 1 island | High-throughput solution |
+| -371 | `((7×7) → [Island 2: +4]) × (-7)` | 3 regular + 1 island | |
+| 322 | `(10×8×4) → [Island 4: +2]` | 3 regular + 1 island | |
 
 ## Strategy Tips
 - Look for products that get close to the target
